@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick-theme.css"/>
+<style>
+    h2, h3 {margin:0px; padding:0px; border:0px;}
+    p {line-height:1.25; }
+
+    .content {margin:auto; padding:0px; width:800px; height:550px;}
+    .single-item > div {border:1px solid #CCC;}
+
+    .slick-slide {padding:1em; padding-top:0.8em; width:800px; height:550px; }
+    .slick-prev:before, .slick-next:before { 
+        color:green;
+    }
+    .slick-slide > img {display:block; margin:auto; }
+</style>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+<script>//<![CDATA[ 
+    window.onload=function(){
+    $(document).ready(function() {
+        $('.single-item').slick({
+            dots: false,
+            infinite: false,
+            speed: 0,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    });
+    }//]]>  
+</script>
+
+</head>
+<body>
+
+<section id="features">
+<div class="content"> <div class="single-item">
+
+  <div>
+    <h2>Introduction</h2>
+    <p>
+    This slide deck walks through setting up a Linux virtual machine on
+    Windows. It takes about 1 hour.
+    </p>
+    <h3>Get VirtualBox</h3>
+    <p>
+    We'll use <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a>
+    to run our virtual machine. Go to the VirtualBox
+    <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">downloads page</a>
+    and download the Windows installer for VirtualBox, listed under "platform
+    packages". Once it's downloaded, run the installer. It's safe to use the
+    default installation settings.
+    </p>
+    <h3>Get Linux</h3>
+    <p>
+    Next, you need to select the Linux distribution you're going to install.
+    There are dozens of different distributions available, and each has certain
+    advantages and disadvantages. For the remainder of this tutorial, we'll
+    focus on the Xfce edition of <a href="http://www.linuxmint.com/">Linux Mint</a>,
+    because it's user-friendly and has reasonable hardware requirements.
+    However, if you're interested in trying a different distribution, go for
+    it! Virtual machines are a great, safe way to try out new operating systems
+    and software. <a href="http://distrowatch.com/">DistroWatch</a> lists the
+    most popular Linux distributions.
+    </p>
+    <p>
+    If you're following along with Linux Mint,
+    <a href="http://www.linuxmint.com/edition.php?id=182">download</a>
+    the disk image. This may take a while.
+    </p>
+  </div>
+
+  <div>
+    <p>
+    First let's configure a new virtual machine in VirtualBox. When you start
+    VirtualBox, you should see a dialog like the one below.
+    </p>
+    <img src="img/image-0.jpg" height="400px" />
+    <p>
+    Click on the "New" button.
+    </p>
+  </div>
+
+  <div>
+    <p>
+    Click on "Hide Description" to show the full details of the new virtual
+    machine.
+    </p>
+    <img src="img/image-1.jpg" />
+  </div>
+
+  <div>
+    <p>
+    Enter "Linux" as the name of your virtual machine. VirtualBox will
+    automatically guess the correct type and version for you.
+    </p>
+    <p>
+    Set the memory size to the largest power of 2 that's in the green (768 MB 
+    is also okay).
+    </p>
+    <img src="img/image-2.jpg" height="400px" />
+    <p>
+    Also select "Create virtual hard drive now."
+    </p>
+  </div>
+
+  <div>
+    <p>
+    Choose a location for the virtual hard drive your machine will use,
+    and set the disk size to at least 20 GB. You can set a higher disk size,
+    but make sure your computer has enough free disk space first.
+    </p>
+    <img src="img/image-3.jpg" />
+    <p>
+    Also select "Fixed size," which will give slightly better performance.
+  </div>
+
+  <div>
+    <p>
+    Once you finish setting up the virtual machine, you'll be returned to the
+    main VirtualBox dialog.
+    </p>
+    <img src="img/image-4.jpg" height="450px" />
+    <p>
+    Click on the "Settings" button.
+    </p>
+  </div>
+
+  <div>
+    <p>
+    On the Display tab, increase the video memory as much as possible (unless
+    you like working at very low resolutions!).
+    </p>
+    <p>
+    Make sure the accelaration boxes are both unchecked, as they can cause
+    problems on some computers.
+    </p>
+    <img src="img/image-5.jpg" />
+  </div>
+
+  <div>
+    <p>
+    On the Storage tab, click on the disk drive.
+    </p>
+    <img src="img/image-6.jpg" />
+  </div>
+
+  <div>
+    <p>
+    Use the add disk button to add the Linux Mint ISO to the drive.
+    </p>
+    <img src="img/image-7.jpg" />
+  </div>
+
+  <div>
+    <p>
+    After adding the Linux Mint ISO, it should be listed in the dialog.
+    </p>
+    <img src="img/image-8.jpg" />
+  </div>
+  <div>
+    <p>
+    On the Shared Folders tab, click the add folder button.
+    </p>
+    <img src="img/image-9.jpg" />
+  </div>
+  <div>
+    <p>
+    Add a folder that's located in a convenient place on your computer. This
+    will be important later if you want to transfer files to and from your
+    virtual machine.
+    </p>
+    <p>
+    Also, make sure auto-mount is on.
+    </p>
+    <img src="img/image-27.jpg" />
+  </div>
+
+  <div>
+    <p>
+    You're finally done setting up your virtual machine! All that's left is to
+    install Linux.
+    </p>
+    <img src="img/image-11.jpg" height="450px" />
+    <p>
+    Go ahead and press the "Start" button. You know you want to.
+    </p>
+  </div>
+
+  <div>
+    <p>
+    Be patient while the Linux installer boots; it can take several minutes.
+    Once it's done, you should see a screen like the one below.
+    </p>
+    <img src="img/image-12.jpg" height="450px" />
+    <p>
+    Double-click on "Install Linux Mint."
+    </p>
+  </div>
+
+  <div>
+    <p>
+    Work through the installer dialogs. Most of them are self-explanatory, but
+    check the following slides for details on a few of them.
+    </p>
+    <img src="img/image-13.jpg" height="450px" />
+  </div>
+
+  <div>
+    <p>
+    Choose "Erase disk and install Linux Mint" at this step.
+    </p>
+    <img src="img/image-14.jpg" height="450px" />
+  </div>
+
+  <div>
+    <p>
+    Choose a sensible username and password. Remember your password, you'll
+    need it to install programs on your virtual machine.
+    </p>
+    <img src="img/image-16.jpg" height="450px" />
+  </div>
+
+  <div>
+    <p>
+    The installation can take up to 30 minutes. After it's done, you'll see the
+    prompt below. Click "Continue Testing."
+    </p>
+    <img src="img/image-17.jpg" height="450px" />
+  </div>
+
+  <div>
+    <p>
+    In the Linux Mint applications menu, click the log out button, and use the
+    prompt that appears to shut down the virtual machine.
+    </p>
+    <img src="img/image-18.jpg" height="450px" />
+  </div>
+
+  <div>
+    <p>
+    After the machine has shut down, start it back up again. Once it's done
+    booting, you should see a screen like the one below.
+    </p>
+    <img src="img/image-20.jpg" height="400px" />
+    <p>
+    Congratulations, you've successfully installed Linux Mint!
+    </p>
+  </div>
+
+  <div>
+    <p>
+    You might want to use the software manager to install software we'll be
+    using in this class.
+    </p>
+    <img src="img/image-21.jpg" height="400px" />
+  </div>
+
+  <div>
+    <p>
+    In particular, install git...
+    </p>
+    <img src="img/image-23.jpg" height="400px" />
+  </div>
+
+  <div>
+    <p>
+    ...and R.
+    </p>
+    <img src="img/image-25.jpg" height="400px" />
+  </div>
+
+  <div>
+    <p>
+    Rather than shutting down your virtual machine when you're done with it,
+    you might want to save it state. This is a bit like putting it to sleep,
+    and makes it much faster to start up again later.
+    </p>
+    <img src="img/image-26.jpg" />
+  </div>
+
+  <div>
+    <p>
+    Good job, you're done!
+    </p>
+  </div>
+
+</div> </div>
+</section>
+
+</body>
+</html>
+
